@@ -1,0 +1,33 @@
+<html lang="en">
+  <head>
+    <title>Sentiment Analyis / Text Classification - Demo from Instructor</title>
+  </head>
+  <body>
+      <center>
+      <h1>Sentiment Analyis / Text Classification - Demo from Instructor</h1>
+      <form method="post" action="/result">
+        <table border="1">
+            <tr>
+                <td>Sentence</td>
+                <td><textarea name="sentence" rows="4" cols="50" required></textarea></td>
+            </tr>
+           
+            <tr>
+                <td></td>
+                <td><button type="submit" name="predict">PREDICT</button></td>
+            </tr>
+          </table>
+      </form><br/>
+          
+          <h3>Last predicted sentences:</h3>
+          <table>
+                {% for data in last_data %}
+                <tr>
+                    <td>{{ data }}</td>
+                </tr>
+                {% endfor %}
+          </table>
+          <img src="https://upload.wikimedia.org/wikipedia/en/8/8d/Sejong_University.png"/>
+      </center>
+  </body>      
+</html>
